@@ -59,3 +59,4 @@ You should also get and install the postgres app for Mac (assuming you're on mac
   ```
   ./manage.py runserver
   ```
+8. Go to the app in your browser: http://localhost:8000
