@@ -21,5 +21,13 @@ def index(request):
 
 def planner(request):
 
-	context = {}
+
+
+
+
+	context = {'foo':'bar'}
 	return render(request, 'planner/index.html', context)
+
+
+def get_state_locations(request):
+	pass
