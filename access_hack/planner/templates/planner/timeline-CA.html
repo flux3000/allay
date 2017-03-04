@@ -1,0 +1,50 @@
+{% extends "planner/layout.html" %}
+
+{% block subtitle %}My Timeline | {% endblock %}
+
+{% block content %}
+
+<main id="timeline-ca" class="timeline">
+
+  <section class="timeline-summary row">
+    <div class="small-12 medium-6 columns">
+      <h1 class="timeline-header__title title">Your Plan</h1>
+      <div class="timeline-header__tile tile">
+        <div class="timeline-header__tile-edit">
+          <a>Edit</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="timeline-header row">
+    <div class="small-12 medium-6 columns">
+      <h1 class="timeline-header__title">Your Road Ahead</h1>
+      <h3 class="timeline-header__subtitle"> Based on your answers, here's what you can expect.</div>
+    </div>
+
+  </section>
+
+  <section class="home-summary">
+    <div class="row">
+      <div class="small-12 medium-6 columns">
+        <h5 class="home-summary__text">Allay is your visualized map of your abortion path, offering trustworthy information for every step along the way. </h4>
+      </div>
+      <div class="small-12 medium-6 columns">
+        Lorem Ipsum
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+
+$(document).ready(function() {
+  $('.js-get-started').click("")
+
+});
+
+</script>
+
+{% endblock %}

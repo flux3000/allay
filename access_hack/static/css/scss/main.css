@@ -14,6 +14,16 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.tile {
+  display: block;
+  cursor: default;
+  border: 2px solid #dependable;
+  padding: 10px;
+  border-radius: 3px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  margin: 0 2%;
+  text-align: center; }
+
 button {
   display: inline-block;
   font-weight: 300;
@@ -33,6 +43,14 @@ button {
   font-size: 14px;
   padding: 0 14px;
   min-width: 100px; }
+
+a {
+  color: #5CCAC1; }
+  a:hover {
+    color: #00216B; }
+
+title {
+  text-align: center; }
 
 .main-nav {
   position: fixed;
@@ -86,5 +104,9 @@ footer {
   justify-content: center; }
   .home-summary .home-summary__text {
     font-weight: 300; }
+
+.timeline .timeline-header__tile-edit {
+  width: 100%;
+  text-align: right; }
 
 /*# sourceMappingURL=../../../../../../../../../../static/scss/main.css.map */
