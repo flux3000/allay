@@ -11,23 +11,38 @@ from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned, 
 
 
 def index(request):
-    
-    # if request.user.is_authenticated():
-    #     return redirect('/planner/')
-    
-    # return redirect('login_view')
-    return redirect('/planner/')
+
+    return redirect('/welcome/')
 
 
-def planner(request):
+def welcome(request):
+
+	context = {}
+	return render(request, 'planner/welcome.html', context)
+
+def intake(request):
+
+	context = {}
+	return render(request, 'planner/intake.html', context)
+
+def options(request):
+
+	context = {}
+	return render(request, 'planner/options.html', context)
+
+
+def timeline_ca(request):
+
+	context = {}
+	return render(request, 'planner/timeline-CA.html', context)
+
+
+def timeline_tx(request):
+
+	context = {}
+	return render(request, 'planner/timeline-TX.html', context)
 
 
 
 
 
-	context = {'foo':'bar'}
-	return render(request, 'planner/index.html', context)
-
-
-def get_state_locations(request):
-	pass
