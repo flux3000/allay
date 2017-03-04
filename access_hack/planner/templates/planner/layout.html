@@ -15,7 +15,10 @@
 <script type="text/javascript" src="{% static "jquery-2.1.4.min.js" %}"></script>
 <script type="text/javascript" src="{% static "jquery-ui/jquery-ui.min.js" %}"></script>
 <script type="text/javascript" src="{% static "main.js" %}"></script>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed|Roboto|Dosis|Mallanna' rel='stylesheet' type='text/css'>
+<!-- <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Mallanna' rel='stylesheet' type='text/css'> -->
+
 {% load sass_tags %}
 <link href="{% sass_src 'scss/main.scss' %}" rel="stylesheet" type="text/css" />
 {% block appstyles %}{% endblock %}
@@ -25,11 +28,18 @@
 
 <body>
 
+<nav class="main-nav">
+  <button class="main-nav__menu js-main-menu">Menu</button>
+  <button class="main-nav__log-in js-main-login">Log In</button>
+</nav>
+
 <div class="container">
 
     {% block content %}{% endblock %}
 
 </div>
+
+<footer></footer>
 
 <script>
 </script>

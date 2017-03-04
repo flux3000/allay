@@ -1,12 +1,13 @@
 {
 	"version": 3,
-	"file": "../../Users/Ryan/Web/2017-03-hackathon/access_hack_repository/access_hack/static/scss/main.css",
+	"file": "../../Users/becca/Desktop/Becca/AbortionAccessHackathon/hack/ischool_access_hack/access_hack/static/scss/main.css",
 	"sources": [
-		"../../Users/Ryan/Web/2017-03-hackathon/access_hack_repository/access_hack/static/scss/main.scss",
-		"../../Users/Ryan/Web/2017-03-hackathon/access_hack_repository/access_hack/static/scss/_colors.scss",
-		"../../Users/Ryan/Web/2017-03-hackathon/access_hack_repository/access_hack/static/scss/_fonts.scss",
-		"../../Users/Ryan/Web/2017-03-hackathon/access_hack_repository/access_hack/static/scss/_mixins.scss"
+		"../../Users/becca/Desktop/Becca/AbortionAccessHackathon/hack/ischool_access_hack/access_hack/static/scss/main.scss",
+		"../../Users/becca/Desktop/Becca/AbortionAccessHackathon/hack/ischool_access_hack/access_hack/static/scss/_colors.scss",
+		"../../Users/becca/Desktop/Becca/AbortionAccessHackathon/hack/ischool_access_hack/access_hack/static/scss/_fonts.scss",
+		"../../Users/becca/Desktop/Becca/AbortionAccessHackathon/hack/ischool_access_hack/access_hack/static/scss/_mixins.scss",
+		"../../Users/becca/Desktop/Becca/AbortionAccessHackathon/hack/ischool_access_hack/access_hack/static/scss/_style-global.scss"
 	],
 	"names": [],
-	"mappings": "ACAA,sCAAsC;ACAtC,oBAAoB;ACApB,qBAAqB;AHQrB,AAAA,IAAI,EAAE,AAAA,IAAI,CAAC;EACP,WAAW,EEPA,gBAAgB,EAAE,WAAW,EAAE,OAAO,EAAE,UAAU,CFOlC,UAAU;EACrC,gBAAgB,ECHJ,OAAO,CDGc,UAAU;EAC3C,KAAK,ECRM,OAAO,CDQG,UAAU;EAC/B,WAAW,EEJM,GAAG;EFKpB,SAAS,EAAE,IAAI;EACf,cAAc,EAAE,IAAI;EACpB,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,IAAI;EAChB,sBAAsB,EAAE,WAAW;EACnC,uBAAuB,EAAE,SAAS,GACrC"
+	"mappings": "ACeA,sCAAsC;ACftC,oBAAoB;ACApB,qBAAqB;ACArB,AAAA,IAAI,EAAE,AAAA,IAAI,CAAC;EACP,WAAW,EFEA,QAAQ,EAAC,WAAW,EAAC,gBAAgB,EAAE,WAAW,EAAE,OAAO,EAAE,UAAU,CEFvD,UAAU;EACrC,gBAAgB,EHAV,OAAO,CGAuB,UAAU;EAC9C,KAAK,EHUM,IAAI,CGVM,UAAU;EAC/B,WAAW,EFKM,GAAG;EEJpB,SAAS,EAAE,IAAI;EACf,cAAc,EAAE,IAAI;EACpB,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,IAAI;EAChB,sBAAsB,EAAE,WAAW;EACnC,uBAAuB,EAAE,SAAS,GACrC;;AAED,AAAA,MAAM,CAAC;EACL,OAAO,EAAE,YAAY;EACrB,WAAW,EAAE,GAAG;EAChB,eAAe,EAAE,IAAI;EACrB,UAAU,EAAE,MAAM;EAClB,cAAc,EAAE,OAAO;EACvB,KAAK,EAAE,OAAO;EACd,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,OAAO,EAAE,OAAO;EAChB,MAAM,EAAE,OAAO;EACf,aAAa,EAAE,GAAG;EAClB,UAAU,EAAE,UAAU;EACtB,UAAU,EAAE,uBAAuB;EACnC,MAAM,EAAE,IAAI;EACZ,WAAW,EAAE,IAAI;EACjB,SAAS,EAAE,IAAI;EACf,OAAO,EAAE,MAAM;EACf,SAAS,EAAE,KAAK,GACjB;;AJzBD,AAAA,SAAS,CAAC;EACR,QAAQ,EAAE,KAAK;EACf,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;EAC9B,GAAG,EAAE,CAAC;EACN,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,KAAK;EACZ,gBAAgB,ECPP,OAAO,GDgBjB;EAhBD,AAUE,SAVO,CAUP,MAAM,CAAC;IACL,MAAM,EAAE,IAAI;IACZ,gBAAgB,ECZT,OAAO;IDad,KAAK,ECnBC,OAAO;IDoBb,MAAM,EAAE,GAAG,CAAC,KAAK,CCdV,OAAO,GDef;;AAGH,AAAA,UAAU,CAAC;EACT,KAAK,EAAE,KAAK;EACZ,UAAU,EAAE,IAAI,GACjB;;AAED,AAAA,MAAM,CAAC;EACL,gBAAgB,ECxBP,OAAO;EDyBhB,MAAM,EAAE,IAAI,GACb;;AAKD,AAAA,aAAa,CAAC;EACZ,UAAU,EAAE,MAAM,GACnB;;AAED,AAAA,YAAY,CAAC;EACX,MAAM,EAAE,KAAK;EACb,gBAAgB,EC3CR,OAAO;ED4Cf,QAAQ,EAAE,QAAQ,GAsBnB;EAzBD,AAKE,YALU,CAKV,mBAAmB;EALrB,AAME,YANU,CAMV,sBAAsB,CAAC;IACrB,MAAM,EAAE,MAAM,GACf;EARH,AAUE,YAVU,CAUV,sBAAsB,CAAC;IACrB,WAAW,EAAE,GAAG,GACjB;EAZH,AAcE,YAdU,CAcV,mBAAmB,CAAC;IAClB,MAAM,EAAE,YAAY,GACrB;EAhBH,AAkBE,YAlBU,CAkBV,MAAM,CAAC;IACL,gBAAgB,ECtDT,OAAO;IDuDd,MAAM,EAAE,GAAG,CAAC,KAAK,CCvDV,OAAO;IDwDd,KAAK,EAAE,IAAI;IACX,QAAQ,EAAE,QAAQ;IAClB,MAAM,EAAE,KAAK,GACd;;AAGH,AAAA,aAAa,CAAC;EACZ,gBAAgB,EClEL,OAAO;EDmElB,MAAM,EAAE,KAAK;EACb,OAAO,EAAE,MAAM;EACf,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;EACnB,eAAe,EAAE,MAAM,GAKxB;EAXD,AAQE,aARW,CAQX,mBAAmB,CAAC;IAClB,WAAW,EAAE,GAAG,GACjB"
 }

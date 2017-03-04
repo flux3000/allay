@@ -2,9 +2,9 @@
 /* Fonts and Text */
 /* Layout Settings */
 html, body {
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
-  background-color: #F9F9F9 !important;
-  color: #505050 !important;
+  font-family: "Roboto", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
+  background-color: #fffffa !important;
+  color: #000 !important;
   font-weight: 300;
   font-size: 16px;
   letter-spacing: .2px;
@@ -14,4 +14,77 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-/*# sourceMappingURL=../../../../../../../../static/scss/main.css.map */
+button {
+  display: inline-block;
+  font-weight: 300;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: initial;
+  width: initial;
+  margin: 0;
+  outline: 0;
+  opacity: inherit;
+  cursor: pointer;
+  border-radius: 3px;
+  box-sizing: border-box;
+  transition: background 120ms linear;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  padding: 0 14px;
+  min-width: 100px; }
+
+.main-nav {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  height: 40px;
+  width: 100vw;
+  background-color: #00216B; }
+  .main-nav button {
+    height: 100%;
+    background-color: #00216B;
+    color: #fffffa;
+    border: 1px solid #00216B; }
+
+.container {
+  width: 100vw;
+  margin-top: 40px; }
+
+footer {
+  background-color: #00216B;
+  height: 80px; }
+
+#landing-page {
+  text-align: center; }
+
+.home-header {
+  height: 140px;
+  background-color: #fffffa;
+  position: relative; }
+  .home-header .home-header__title,
+  .home-header .home-header__subtitle {
+    margin: 0 auto; }
+  .home-header .home-header__subtitle {
+    font-weight: 300; }
+  .home-header .home-header__title {
+    margin: 100px 0 30px; }
+  .home-header button {
+    background-color: #00216B;
+    border: 1px solid #00216B;
+    color: #fff;
+    position: relative;
+    bottom: -20px; }
+
+.home-summary {
+  background-color: #5CCAC1;
+  height: 100px;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .home-summary .home-summary__text {
+    font-weight: 300; }
+
+/*# sourceMappingURL=../../../../../../../../../../static/scss/main.css.map */
