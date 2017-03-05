@@ -1,0 +1,77 @@
+{% extends "planner/layout.html" %}
+
+{% block subtitle %}Intake | {% endblock %}
+
+{% block content %}
+
+<main id="intake">
+
+	<div class="intake_header">
+		<header>
+			<h3>First, please answer a few short questions.</h3>
+		</header>
+<!-- 		<div class="intake_description">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+		</div> -->
+	</div>
+
+
+	<div class="intake_questions">
+		<div class="intake_form_wrapper">
+			<div class="intake_form">
+				<div class="intake_form_row row">
+					<div class="intake_form_question small-12 medium-8 columns">
+						Are you 18 years of age or older?
+					</div>
+					<div class="intake_form_value small-12 medium-4 columns">
+
+						<select id="question_age">
+							<option value="">Select</option>
+							<option value="">-------</option>
+							<option value="">Yes</option>
+							<option value="">No</option>
+						</select>
+					</div>
+				</div>				
+
+				<div class="intake_form_row row">
+					<div class="intake_form_question small-12 medium-8 columns">
+						What is your zip code?
+					</div>
+					<div class="intake_form_value small-12 medium-4 columns">
+
+						<input id="question_zip" name="question_zip" type="text" size="5">
+					</div>
+				</div>
+
+				<div class="intake_form_row row">
+					<div class="intake_form_question small-12 medium-8 columns">
+						How many weeks pregnant are you? Please give your best estimate.
+					</div>
+					<div class="intake_form_value small-12 medium-4 columns">
+
+						<input id="question_weeks" name="question_weeks" type="text" size="2">
+					</div>
+				</div>
+
+				<div class="intake_form_button_row">
+					<button class="large intake_form_button" id="intakeSubmit">Continue</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+</main>
+
+<script>
+
+$(document).ready(function() {
+
+
+});
+
+</script>
+
+{% endblock %}
