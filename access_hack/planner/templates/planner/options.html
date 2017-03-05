@@ -21,7 +21,7 @@
 		</header>
 		<div class="options_button_wrapper row">
 			<div class="options_button_container small-12 medium-6 columns">
-				<button class="large">Take a Pill</button>
+				<button class="large option_button" data-option="pill">Take a Pill</button>
 				<div class="options_button_description">
 					With this option, you take a pill rather than have a procedure in a doctor's office.
 				</div>			
@@ -35,7 +35,7 @@
 				</div>
 			</div>	
 			<div class="options_button_container small-12 medium-6 columns">
-				<button class="large">Visit a Clinic</button>
+				<button class="large option_button" data-option="clinic">Visit a Clinic</button>
 				<div class="options_button_description">
 					With this option, you visit a clinic and a doctor will perform the procedure.
 				</div>			
@@ -77,7 +77,7 @@
 				</div>
 			</div>	
 
-			<div class="clinic_row row">
+			<div class="clinic_row row california">
 				<div class="clinic small-12 medium-6 columns">
 					<div class="clinic_name">
 						Planned Parenthood - Oakland Office
@@ -97,7 +97,7 @@
 				</div>
 			</div>	
 			
-			<div class="clinic_row row">
+			<div class="clinic_row row california">
 				<div class="clinic small-12 medium-6 columns">
 					<div class="clinic_name">
 						Family Planning Specialists
@@ -116,7 +116,7 @@
 					<button class="clinic_select_btn">Select</button>
 				</div>
 			</div>				
-			<div class="clinic_row row">
+			<div class="clinic_row row california">
 				<div class="clinic small-12 medium-6 columns">
 					<div class="clinic_name">
 						Planned Parenthood - Walnut Creek Office
@@ -130,6 +130,64 @@
 				</div>				
 				<div class="clinic_cost small-12 medium-2 columns">
 					$535
+				</div>				
+				<div class="clinic_select small-12 medium-2 columns">
+					<button class="clinic_select_btn">Select</button>
+				</div>
+			</div>				
+			<div class="clinic_row row texas">
+				<div class="clinic small-12 medium-6 columns">
+					<div class="clinic_name">
+						Suburban Women's Clinic
+					</div>
+					<div class="clinic_address">
+						3101 Richmond Ave #250, Houston, TX 77098
+					</div>
+				</div>				
+				<div class="clinic_distance small-12 medium-2 columns">
+					12.5 miles
+				</div>				
+				<div class="clinic_cost small-12 medium-2 columns">
+					$705
+				</div>				
+				<div class="clinic_select small-12 medium-2 columns">
+					<button class="clinic_select_btn">Select</button>
+				</div>
+			</div>				
+			<div class="clinic_row row texas">
+				<div class="clinic small-12 medium-6 columns">
+					<div class="clinic_name">
+						Women's Center of Houston
+					</div>
+					<div class="clinic_address">
+						8200 Wednesbury Ln, Houston, TX 77074
+					</div>
+				</div>				
+				<div class="clinic_distance small-12 medium-2 columns">
+					18.9 miles
+				</div>				
+				<div class="clinic_cost small-12 medium-2 columns">
+					$635
+				</div>				
+				<div class="clinic_select small-12 medium-2 columns">
+					<button class="clinic_select_btn">Select</button>
+				</div>
+			</div>	
+				
+			<div class="clinic_row row texas">
+				<div class="clinic small-12 medium-6 columns">
+					<div class="clinic_name">
+						Houston Women's Clinic
+					</div>
+					<div class="clinic_address">
+						4820 San Jacinto St, Houston, TX 77004
+					</div>
+				</div>				
+				<div class="clinic_distance small-12 medium-2 columns">
+					19.1 miles
+				</div>				
+				<div class="clinic_cost small-12 medium-2 columns">
+					$595
 				</div>				
 				<div class="clinic_select small-12 medium-2 columns">
 					<button class="clinic_select_btn">Select</button>
@@ -150,7 +208,7 @@
 			</div>			
 		</header>
 		<div class="options_form_wrapper">
-			<form class="options_form" id="optionsForm" action="">
+			<div class="options_form">
 				<div class="options_form_row row">
 					<div class="options_form_question small-12 medium-8 columns">
 						Will you be requiring child care or pet sitting while you are undergoing your procedure?
@@ -207,7 +265,7 @@
 				<div class="options_form_button_row">
 					<button class="large options_form_button" id="createTimeline">Create My Timeline</button>
 				</div>
-			</form>
+			</div>
 		</div>
 	</div>
 
@@ -221,6 +279,83 @@
 
 $(document).ready(function() {
 
+	function getSearchParameters() {
+	      var prmstr = window.location.search.substr(1);
+	      return prmstr != null && prmstr != "" ? transformToAssocArray(prmstr) : {};
+	}
+
+	function transformToAssocArray( prmstr ) {
+	    var params = {};
+	    var prmarr = prmstr.split("&");
+	    for ( var i = 0; i < prmarr.length; i++) {
+	        var tmparr = prmarr[i].split("=");
+	        params[tmparr[0]] = tmparr[1];
+	    }
+	    return params;
+	}
+
+	var params = getSearchParameters();
+
+	var state = params.state;
+
+	if (!state){
+		state = "texas";
+	}
+
+	console.log("State: " + state);
+
+	// Pill = Texas, Clinic = California
+
+	var option = "pill";
+
+	$(".option_button").click(function(e) {
+		e.preventDefault();
+		
+		$(".option_button").removeClass("selected");
+		$(this).addClass("selected");
+
+		option = $(this).data("option");
+
+		$(".options_locations").show();
+
+		if (state == "texas"){
+			$(".clinic_row.texas").fadeIn('slow');
+		} else if (state == "california"){
+			$(".clinic_row.california").fadeIn('slow');
+		}
+		
+
+	});
+
+	$(".clinic_select_btn").click(function(e) {
+		e.preventDefault();
+		$(".options_questions").fadeIn('slow');
+		$(".clinic_select_btn, .clinic_row").removeClass("selected")
+		$(".clinic_select_btn").text("Select");
+
+		$(this).addClass("selected").text("Selected");
+		$(this).parents(".clinic_row").addClass("selected");
+		// $(".clinic_row").not(".selected").addClass("deselected");
+
+
+	});
+
+
+	$("#createTimeline").click(function(e){
+		e.preventDefault();
+		var location;
+		
+		if (state == "california") {
+			location = "/timeline/ca/";
+		}		
+		if (state == "texas") {
+			location = "/timeline/tx/";
+		}
+
+		document.location = location;
+	});
+
+	
 });
 
 </script>
