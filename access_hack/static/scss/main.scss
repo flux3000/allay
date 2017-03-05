@@ -23,7 +23,30 @@
     background-color: $deep-sea;
     color: $whitish;
     border: 1px solid $deep-sea;
+    width: 80px;
   }
+}
+
+.main-nav__menu {
+  padding-left: 20px;
+  text-align: left;
+}
+
+.main-nav__logo {
+  font-family: 'Lobster', 'Open Sans';
+  font-size: 1.4em;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 300ms fade-in;
+
+  &.is-visible {
+    opacity: 1;
+  }
+}
+
+.main-nav__log-in {
+  padding-right: 20px;
+  text-align: right;
 }
 
 .container {
@@ -43,11 +66,14 @@ footer {
 
 #landing-page {
   text-align: center;
+  position: relative;
+  top: -60px;
+  height: calc(100vh + 220px);
 }
 
 .home-header {
-  height: 140px;
-  background-color: $whitish;
+  height: 380px;
+  background: linear-gradient(180deg, #fff 0%, #E3FBED 80%);
   position: relative;
 
   .home-header__title,
@@ -55,26 +81,33 @@ footer {
     margin: 0 auto;
   }
 
-  .home-header__subtitle {
-    font-weight: 300;
+  .home-header__title {
+    font-family: 'Lobster';
+    font-size: 5em;
+    padding-top: 130px;
+    color: $deep-sea;
   }
 
-  .home-header__title {
-    margin: 100px 0 30px;
+  .home-header__subtitle {
+    font-weight: 300;
+    color: $drab;
   }
 
   button {
     background-color: $deep-sea;
     border: 1px solid $deep-sea;
     color: #fff;
-    position: relative;
-    bottom: -20px;
+    position: absolute;
+    display: block;
+    bottom: -21px;
+    left: calc(50% - 125px);
   }
 }
 
 .home-summary {
   background-color: $dependable;
-  height: 100px;
+  color: $deep-sea;
+  height: 180px;
   padding: 0 30px;
   display: flex;
   align-items: center;
@@ -82,7 +115,16 @@ footer {
 
   .home-summary__text {
     font-weight: 300;
+    line-height: 1.5em;
+    color: $drab;
   }
+}
+
+.home-image {
+  height: calc(100vh - 280px);
+  background: url("../images/hands-coffee-smartphone-technology.jpg") 0 0  no-repeat;
+  background-size: cover;
+  opacity: 0.7;
 }
 
 ////////////////////////////////////////////
@@ -134,11 +176,11 @@ footer {
         font-weight: $font-weight-bold;
         text-transform: uppercase;
         letter-spacing: 1px;
-        font-size: .9em; 
+        font-size: .9em;
         border-bottom: $light-border;
         padding-bottom: 12px;
-        margin-bottom: 12px;    
-        margin-top: 24px;  
+        margin-bottom: 12px;
+        margin-top: 24px;
       }
 
       .weeks_remaining_pill, .weeks_remaining_abortion {
@@ -209,7 +251,7 @@ footer {
             padding-bottom: 12px;
             margin-bottom: 6px;
           }
-          
+
           ul {
             list-style-type: none;
             padding-left: 0px;
@@ -219,7 +261,7 @@ footer {
             }
           }
 
-          @media only screen and (max-width: 480px) { 
+          @media only screen and (max-width: 480px) {
             font-size: .9em;
           }
 
@@ -230,7 +272,7 @@ footer {
           &:first-of-type {
             margin-bottom: 32px;
           }
-          
+
         }
 
       }
@@ -270,7 +312,7 @@ footer {
       .clinic_row {
 
         display: none;
-        
+
         font-size: .8em;
         border-bottom: $light-border;
         margin-bottom: 12px;
@@ -279,15 +321,15 @@ footer {
         &:last-of-type {
           border-bottom: none;
         }
-        
+
         &.selected {
           background-color: $lightest-gray;
-        }        
+        }
         &.deselected {
           /*opacity: .8;*/
           color: $dark-gray;
         }
-        
+
         @media only screen and (max-width: 480px) {
           max-width: 90%;
           margin: 0px auto 12px;
@@ -310,14 +352,14 @@ footer {
         .clinic {
           text-align: left;
           line-height: 36px;
-          
+
           .clinic_name {
             display: block;
             text-align: left;
             font-size: 1.2em;
             font-weight: $font-weight-ltbold;
             padding-left: 12px;
-          }          
+          }
           .clinic_address {
             display: block;
             text-align: left;
@@ -339,7 +381,7 @@ footer {
             display: none;
           }
 
-          @media only screen and (max-width: 480px) { 
+          @media only screen and (max-width: 480px) {
             text-align: left;
             line-height: 1.5em;
             .label {
@@ -356,27 +398,28 @@ footer {
           text-align: center;
           line-height: 36px;
           padding-top: 6px;
-          
+
           button {
             background-color: $dependable;
+            border: 1px solid $dependable;
             color: $white;
             font-weight: $font-weight-ltbold;
             height: auto;
-            line-height: 30px;    
-            font-size: 12px;   
+            line-height: 30px;
+            font-size: 12px;
             &.selected {
               background: $dependable-dark;
-            }                     
+            }
           }
 
-          @media only screen and (max-width: 480px) { 
+          @media only screen and (max-width: 480px) {
             margin-top: 24px;
 
             button {
               min-width: 100px;
               padding: 0px 14px;
               height: auto;
-              font-size: 14px;             
+              font-size: 14px;
             }
           }
         }
@@ -429,9 +472,9 @@ footer {
           margin-bottom: 12px;
           padding-bottom: 12px;
 
-          .options_form_question { 
+          .options_form_question {
 
-            
+
           }
 
           .options_form_value {
@@ -442,7 +485,7 @@ footer {
               font-size: .8em;
             }
 
-            @media only screen and (max-width: 480px) { 
+            @media only screen and (max-width: 480px) {
               margin: 24px auto;
 
               select {
@@ -528,9 +571,9 @@ footer {
           margin-bottom: 12px;
           padding-bottom: 12px;
 
-          .intake_form_question { 
+          .intake_form_question {
 
-            
+
           }
 
           .intake_form_value {
@@ -541,7 +584,7 @@ footer {
               font-size: .8em;
             }
 
-            @media only screen and (max-width: 480px) { 
+            @media only screen and (max-width: 480px) {
               margin: 24px auto;
 
               select {
@@ -575,7 +618,3 @@ footer {
     }
   }
 }
-
-
-
-
