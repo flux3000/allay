@@ -1,5 +1,5 @@
-/* Color Palette for the CBE Survey */
 /* Fonts and Text */
+/* Roboto only has two weights - normal and bold. Adjusted for that*/
 /* Layout Settings */
 html, body {
   font-family: "Roboto", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
@@ -11,6 +11,7 @@ html, body {
   margin: 0;
   padding: 0;
   min-height: 100%;
+  line-height: 1.3;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -33,6 +34,43 @@ button {
   font-size: 14px;
   padding: 0 14px;
   min-width: 100px; }
+  button.large {
+    min-width: 250px;
+    padding: 2px 12px;
+    height: auto;
+    font-size: 18px; }
+  button.small {
+    height: auto;
+    line-height: 30px;
+    font-size: 12px; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0px;
+  font-weight: 600; }
+
+h1 {
+  font-size: 2.2em;
+  margin-bottom: 1em; }
+
+h2 {
+  font-size: 2.0em;
+  margin-bottom: .9em; }
+
+h3 {
+  font-size: 1.6em;
+  margin-bottom: .7em; }
+
+h4 {
+  font-size: 1.4em;
+  margin-bottom: .5em; }
+
+h5 {
+  font-size: 1.2em;
+  margin-bottom: .3em; }
+
+h6 {
+  font-size: 1.1em;
+  margin-bottom: .2em; }
 
 .main-nav {
   position: fixed;
@@ -50,7 +88,8 @@ button {
 
 .container {
   width: 100vw;
-  margin-top: 40px; }
+  max-width: 1100px;
+  margin: 40px auto 0px; }
 
 footer {
   background-color: #00216B;
@@ -87,4 +126,183 @@ footer {
   .home-summary .home-summary__text {
     font-weight: 300; }
 
-/*# sourceMappingURL=../../../../../../../../../../static/scss/main.css.map */
+#options .options_header {
+  padding: 36px 0px;
+  text-align: center; }
+  #options .options_header .options_description {
+    max-width: 50%;
+    margin: 0px auto;
+    font-size: .9em; }
+    @media only screen and (max-width: 480px) {
+      #options .options_header .options_description {
+        max-width: 90%; } }
+
+#options .options_procedures {
+  max-width: 80%;
+  margin: 24px auto 0px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  text-align: center;
+  padding: 48px 0px; }
+  @media only screen and (max-width: 480px) {
+    #options .options_procedures {
+      max-width: 90%; } }
+  #options .options_procedures header {
+    margin-bottom: 48px; }
+  #options .options_procedures .options_button_wrapper .options_button_container button {
+    background-color: #5CCAC1;
+    color: #fff; }
+  #options .options_procedures .options_button_wrapper .options_button_container .options_button_description {
+    margin-top: 18px;
+    font-size: .9em;
+    padding: 12px 32px;
+    /*text-align: left;*/ }
+  #options .options_procedures .options_button_wrapper .options_button_container .options_button_faq {
+    font-size: .8em;
+    padding: 12px 32px;
+    /*text-align: left;*/ }
+    #options .options_procedures .options_button_wrapper .options_button_container .options_button_faq .faq_header {
+      display: inline-block;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: .9em;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      padding-bottom: 12px;
+      margin-bottom: 6px; }
+    #options .options_procedures .options_button_wrapper .options_button_container .options_button_faq ul {
+      list-style-type: none;
+      padding-left: 0px; }
+      #options .options_procedures .options_button_wrapper .options_button_container .options_button_faq ul li {
+        padding-bottom: 8px; }
+    @media only screen and (max-width: 480px) {
+      #options .options_procedures .options_button_wrapper .options_button_container .options_button_faq {
+        font-size: .9em; } }
+  @media only screen and (max-width: 480px) {
+    #options .options_procedures .options_button_wrapper .options_button_container:first-of-type {
+      margin-bottom: 32px; } }
+
+#options .options_locations {
+  max-width: 80%;
+  margin: 24px auto 0px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  text-align: center;
+  padding: 48px 0px; }
+  @media only screen and (max-width: 480px) {
+    #options .options_locations {
+      max-width: 90%; } }
+  #options .options_locations header {
+    margin-bottom: 48px; }
+  #options .options_locations .locations_wrapper .clinic_row {
+    font-size: .8em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 12px;
+    padding-bottom: 12px; }
+    #options .options_locations .locations_wrapper .clinic_row:last-of-type {
+      border-bottom: none; }
+    @media only screen and (max-width: 480px) {
+      #options .options_locations .locations_wrapper .clinic_row {
+        max-width: 90%;
+        margin: 0px auto 12px;
+        font-size: .9em;
+        line-height: 1.5em; } }
+    #options .options_locations .locations_wrapper .clinic_row.header {
+      font-weight: 600;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      padding-bottom: 0px;
+      margin-bottom: 12px; }
+      @media only screen and (max-width: 480px) {
+        #options .options_locations .locations_wrapper .clinic_row.header {
+          display: none !important; } }
+    #options .options_locations .locations_wrapper .clinic_row .clinic {
+      text-align: left;
+      line-height: 36px; }
+      #options .options_locations .locations_wrapper .clinic_row .clinic .clinic_name {
+        display: block;
+        text-align: left;
+        font-size: 1.2em;
+        font-weight: 600; }
+      #options .options_locations .locations_wrapper .clinic_row .clinic .clinic_address {
+        display: block;
+        text-align: left;
+        font-size: .9em;
+        line-height: 1.2em;
+        color: #969696; }
+      @media only screen and (max-width: 480px) {
+        #options .options_locations .locations_wrapper .clinic_row .clinic {
+          padding-bottom: 12px; } }
+    #options .options_locations .locations_wrapper .clinic_row .clinic_distance, #options .options_locations .locations_wrapper .clinic_row .clinic_cost {
+      text-align: center;
+      line-height: 36px; }
+      #options .options_locations .locations_wrapper .clinic_row .clinic_distance .label, #options .options_locations .locations_wrapper .clinic_row .clinic_cost .label {
+        display: none; }
+      @media only screen and (max-width: 480px) {
+        #options .options_locations .locations_wrapper .clinic_row .clinic_distance, #options .options_locations .locations_wrapper .clinic_row .clinic_cost {
+          text-align: left;
+          line-height: 1.5em; }
+          #options .options_locations .locations_wrapper .clinic_row .clinic_distance .label, #options .options_locations .locations_wrapper .clinic_row .clinic_cost .label {
+            display: inline-block;
+            padding-right: 6px;
+            font-weight: 600; } }
+    #options .options_locations .locations_wrapper .clinic_row .clinic_select {
+      text-align: center;
+      line-height: 36px; }
+      #options .options_locations .locations_wrapper .clinic_row .clinic_select button {
+        background-color: #5CCAC1;
+        color: #fff;
+        font-weight: 600;
+        height: auto;
+        line-height: 30px;
+        font-size: 12px; }
+      @media only screen and (max-width: 480px) {
+        #options .options_locations .locations_wrapper .clinic_row .clinic_select {
+          margin-top: 24px; }
+          #options .options_locations .locations_wrapper .clinic_row .clinic_select button {
+            min-width: 100px;
+            padding: 0px 14px;
+            height: auto;
+            font-size: 14px; } }
+
+#options .options_questions {
+  max-width: 80%;
+  margin: 24px auto 0px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  text-align: center;
+  padding: 48px 0px; }
+  @media only screen and (max-width: 480px) {
+    #options .options_questions {
+      max-width: 90%; } }
+  #options .options_questions header {
+    margin-bottom: 48px; }
+  #options .options_questions .options_form_wrapper {
+    margin: 0px auto;
+    max-width: 80%; }
+    @media only screen and (max-width: 480px) {
+      #options .options_questions .options_form_wrapper {
+        max-width: 90%; } }
+    #options .options_questions .options_form_wrapper .options_form {
+      font-size: 1em;
+      text-align: left; }
+      #options .options_questions .options_form_wrapper .options_form .options_form_row {
+        margin-bottom: 12px;
+        padding-bottom: 12px; }
+        #options .options_questions .options_form_wrapper .options_form .options_form_row .options_form_value select {
+          min-width: 150px;
+          max-width: 250px;
+          font-size: .8em; }
+        @media only screen and (max-width: 480px) {
+          #options .options_questions .options_form_wrapper .options_form .options_form_row .options_form_value {
+            margin: 24px auto; }
+            #options .options_questions .options_form_wrapper .options_form .options_form_row .options_form_value select {
+              max-width: none;
+              width: 100%;
+              font-size: 1em; } }
+      #options .options_questions .options_form_wrapper .options_form .options_form_button_row {
+        margin: 36px 0px;
+        text-align: center; }
+        #options .options_questions .options_form_wrapper .options_form .options_form_button_row .options_form_button {
+          background-color: #5CCAC1;
+          color: #fff;
+          font-weight: 600;
+          height: auto; }
+
+/*# sourceMappingURL=../../../../../../../../static/scss/main.css.map */

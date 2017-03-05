@@ -17,38 +17,199 @@
 
 	<div class="options_procedures">
 		<header>
-			<h4>Please choose which of these safe abortion methods you would like to utilize.</h4>
+			<h4>Please choose one of these two options for your procedure.</h4>
 		</header>
-		<div class="options_button_container">
-			<button class="large">Take a Pill</button>
-			<div class="options_button_description">
-				With this option, you take a pill rather than have a procedure in a doctor's office.
-			</div>			
-			<div class="options_button_faq">
-				<ul>
-				<li>This method requires a check-in 2 weeks after the procedure.</li>
-				<li>Sed ut perspiciatis unde omnis iste natus</li>
-				<li>Sit voluptatem accusantium doloremque laudantium</li>
-				</ul>
+		<div class="options_button_wrapper row">
+			<div class="options_button_container small-12 medium-6 columns">
+				<button class="large">Take a Pill</button>
+				<div class="options_button_description">
+					With this option, you take a pill rather than have a procedure in a doctor's office.
+				</div>			
+				<div class="options_button_faq">
+					<div class="faq_header">Things to know:</div>
+					<ul>
+					<li>This method requires a check-in 2 weeks after the procedure.</li>
+					<li>Sed ut perspiciatis unde omnis iste natus</li>
+					<li>Sit voluptatem accusantium doloremque laudantium</li>
+					</ul>
+				</div>
+			</div>	
+			<div class="options_button_container small-12 medium-6 columns">
+				<button class="large">Visit a Clinic</button>
+				<div class="options_button_description">
+					With this option, you visit a clinic and a doctor will perform the procedure.
+				</div>			
+				<div class="options_button_faq">
+					<div class="faq_header">Things to know:</div>
+					<ul>
+					<li>Excepteur sint occaecat cupidatat non proident.</li>
+					<li>Sed ut perspiciatis unde omnis iste natus</li>
+					<li>Sit voluptatem accusantium doloremque laudantium</li>
+					</ul>
+				</div>
+
 			</div>
-		</div>	
-		<div class="options_button_container">
-			<button class="large">Visit a Clinic</button>
-			<div class="options_button_description">
-				With this option, you visit a clinic and a doctor will perform the procedure.
-			</div>			
-			<div class="options_button_faq">
-				<ul>
-				<li>Excepteur sint occaecat cupidatat non proident.</li>
-				<li>Sed ut perspiciatis unde omnis iste natus</li>
-				<li>Sit voluptatem accusantium doloremque laudantium</li>
-				</ul>
+		</div>
+	</div>
+
+
+	<div class="options_locations">
+		<header>
+			<h4>Here are some abortion service providers located near you.</h4>
+			<div class="locations_subheader">
+				These providers offer the services listed/chosen above. You will need to contact them to set up an appointment. Please note that some may be booked, and you may need to explore other options from this list.
 			</div>
+		</header>
+		<div class="locations_wrapper">
+
+			<div class="clinic_row header row">
+				<div class="clinic small-6 columns">
+					Provider Name
+				</div>				
+				<div class="clinic_distance small-2 columns">
+					Distance Away
+				</div>				
+				<div class="clinic_cost small-2 columns">
+					Est. Cost
+				</div>				
+				<div class="clinic_select small-2 columns">
+					&nbsp;
+				</div>
+			</div>	
+
+			<div class="clinic_row row">
+				<div class="clinic small-12 medium-6 columns">
+					<div class="clinic_name">
+						Planned Parenthood - Oakland Office
+					</div>
+					<div class="clinic_address">
+						200 Webster St #100, Oakland, CA 94607
+					</div>
+				</div>				
+				<div class="clinic_distance small-12 medium-2 columns">
+					<div class="label">Distance:</div>1.9 miles
+				</div>				
+				<div class="clinic_cost small-12 medium-2 columns">
+					<div class="label">Estimated Cost:</div>$650
+				</div>				
+				<div class="clinic_select small-12 medium-2 columns">
+					<button class="clinic_select_btn">Select</button>
+				</div>
+			</div>	
+			
+			<div class="clinic_row row">
+				<div class="clinic small-12 medium-6 columns">
+					<div class="clinic_name">
+						Family Planning Specialists
+					</div>
+					<div class="clinic_address">
+						200 Webster St #100, Oakland, CA 94607
+					</div>
+				</div>				
+				<div class="clinic_distance small-12 medium-2 columns">
+					4.5 miles
+				</div>				
+				<div class="clinic_cost small-12 medium-2 columns">
+					$695
+				</div>				
+				<div class="clinic_select small-12 medium-2 columns">
+					<button class="clinic_select_btn">Select</button>
+				</div>
+			</div>				
+			<div class="clinic_row row">
+				<div class="clinic small-12 medium-6 columns">
+					<div class="clinic_name">
+						Planned Parenthood - Walnut Creek Office
+					</div>
+					<div class="clinic_address">
+						200 Webster St #100, Oakland, CA 94607
+					</div>
+				</div>				
+				<div class="clinic_distance small-12 medium-2 columns">
+					8.9 miles
+				</div>				
+				<div class="clinic_cost small-12 medium-2 columns">
+					$535
+				</div>				
+				<div class="clinic_select small-12 medium-2 columns">
+					<button class="clinic_select_btn">Select</button>
+				</div>
+			</div>	
+
 
 		</div>
 	</div>
 
 
+
+	<div class="options_questions">
+		<header>
+			<h4>Please answer a few additional questions.</h4>
+			<div class="questions_subheader">
+				Your responses to these questions will help us to build your customized timeline for your procedure. 
+			</div>			
+		</header>
+		<div class="options_form_wrapper">
+			<form class="options_form" id="optionsForm" action="">
+				<div class="options_form_row row">
+					<div class="options_form_question small-12 medium-8 columns">
+						Will you be requiring child care or pet sitting while you are undergoing your procedure?
+					</div>
+					<div class="options_form_value small-12 medium-4 columns">
+
+						<select id="question_childcare">
+							<option value="">Select</option>
+							<option value="">-------</option>
+							<option value="">Yes</option>
+							<option value="">No</option>
+							<option value="">I don't know</option>
+						</select>
+					</div>
+				</div>				
+
+				<div class="options_form_row row">
+					<div class="options_form_question small-12 medium-8 columns">
+						What will be your primary mode of transportation to the providing clinic?
+					</div>
+					<div class="options_form_value small-12 medium-4 columns">
+
+						<select id="question_childcare">
+							<option value="">Select</option>
+							<option value="">-------</option>
+							<option value="">Car</option>
+							<option value="">Bus</option>
+							<option value="">Train/Subway</option>
+							<option value="">Airplane</option>							
+							<option value="">Other</option>
+							<option value="">I'm not sure</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="options_form_row row">
+					<div class="options_form_question small-12 medium-8 columns">
+						How will you coming up with the funds for the procedure (including the cost of the procedure, travel, lodging, and child/pet care, if applicable)?
+					</div>
+					<div class="options_form_value small-12 medium-4 columns">
+
+						<select id="question_childcare">
+							<option value="">Select</option>
+							<option value="">-------</option>
+							<option value="">I have the funds and will pay out-of-pocket</option>
+							<option value="">I have insurance that will cover most of the cost</option>
+							<option value="">I will need to borrow from friends/family</option>
+							<option value="">I will need to request funds from a support organization</option>
+
+						</select>
+					</div>
+				</div>
+
+				<div class="options_form_button_row">
+					<button class="large options_form_button" id="createTimeline">Create My Timeline</button>
+				</div>
+			</form>
+		</div>
+	</div>
 
 
 
