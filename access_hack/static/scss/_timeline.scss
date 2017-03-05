@@ -18,7 +18,7 @@
 //////////////////////////////////////// Summary
 
 .timeline-summary {
-  padding-bottom: 40px;
+  padding: 40px 10px;
 }
 
 //////////////////////////////////////// Header
@@ -31,15 +31,31 @@
   div {
     width: 100%;
     text-align: left;
-
-    &:first-of-type {
-      text-align: right;
-    }
   }
 }
 
-.timeline-header__tile-type,
-.timeline-header__tile-weeks {
+.timeline-header__tile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.9em;
+
+  .timeline-header__title,
+  .timeline-header__edit {
+    display: inline-block;
+  }
+
+  .timeline-header__title {
+    text-align: left;
+    margin: 0;
+  }
+
+  .timeline-header__title {
+    text-align: right;
+  }
+}
+
+.timeline-header__tile-zip{
   margin-bottom: 12px;
 }
 
@@ -51,6 +67,14 @@
 .timeline-header {
   background-color: $dependable;
   color: $deep-sea;
+}
+
+.timeline-header__title {
+  margin-bottom: .2em;
+}
+
+.timeline-header__subtitle {
+  font-weight: 300;
 }
 
 //////////////////////////////////////// Tabs
@@ -106,6 +130,7 @@
 
 .timeline-line__row-header,
 .timeline-line__row {
+  position: relative;
   display: flex;
   align-items: center;
   text-align: left;
@@ -144,8 +169,26 @@
 .timeline-line__row-block {
   padding: 10px 20px 10px 30px;
   margin: 20px 20px 20px 0;
+  max-width: 50%;
+}
+
+.timeline-line__row-title,
+.timeline-line__row-subtitle,
+.timeline-line__row-body {
+  display: block;
 }
 
 .timeline-line__row-title {
-  font-size: 1.2em;  
+  margin-bottom: 0;
+}
+
+.timeline-line__row-subtitle {
+  color: $dependable;
+  margin: -.2em 0 .2em;
+  font-weight: 700;
+}
+
+.timeline-line__row-body {
+  margin-top: 0;
+  font-weight: 400;
 }
