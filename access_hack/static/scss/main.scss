@@ -1,8 +1,9 @@
 @import 'colors';
 @import 'fonts';
 @import 'mixins';
-
 @import "style-global";
+
+@import "timeline";
 
 ///////////////////////////////////////////////////////////////////
 
@@ -14,6 +15,7 @@
   height: 40px;
   width: 100vw;
   background-color: $deep-sea;
+  z-index: 100;
   // border-bottom: 10px solid $pink;
 
   button {
@@ -83,7 +85,6 @@ footer {
 
 ////////////////////////////////////////////
 
-
 #options {
 
   .options_header {
@@ -95,13 +96,13 @@ footer {
       h3 {
 
       }
-    
+
     }
 
     .options_description {
       font-size: .9em;
     }
-    
+
   }
 
   .options_procedures {
@@ -127,7 +128,7 @@ footer {
       }
 
       .options_button_faq {
-        
+
         ul {
           li {
 
@@ -159,27 +160,3 @@ footer {
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

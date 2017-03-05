@@ -1,0 +1,93 @@
+{% extends "planner/layout.html" %}
+
+{% block subtitle %}My Timeline | {% endblock %}
+
+{% block content %}
+
+<main id="timeline-ca" class="timeline">
+
+  <section class="timeline-summary row">
+    <div class="small-12 columns">
+      <h1 class="timeline-header__title title">Your Plan</h1>
+      <div class="timeline-header__tile tile">
+        <div class="timeline-header__tile-edit"><a>Edit</a></div>
+        <div class="timeline-header__tile-type">Surgical procedure</div>
+        <div class="timeline-header__tile-weeks">Current status: 12 weeks</div>
+        <div class="timeline-header__tile-clinic">Alliance Women's Medical Group</div>
+        <div class="timeline-header__tile-address"> Los Angeles, CA 90057</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="timeline-header row">
+    <div class="small-12 columns">
+      <h1 class="timeline-header__title">Your Road Ahead</h1>
+      <h6 class="timeline-header__subtitle">Based on your answers, here's what you can expect.</h6>
+    </div>
+  </section>
+
+  <section class="timeline-tabs row">
+    <div class="timeline-tabs__wrap small-12 columns">
+      <span class="timeline-tabs__dot dot js-before">Before</span>
+      <span class="timeline-tabs__dot dot js-during">During</span>
+      <span class="timeline-tabs__dot dot js-after">After</span>
+    </div>
+  </section>
+
+  <section class="timeline-line row">
+    <div class="timeline-line__background small-12 columns">
+      <div class="timeline-line__background-left"></div>
+      <div class="timeline-line__background-right"></div>
+    </div>
+
+    <div class="timeline-line__row-header is-left small-12 columns">
+      <div class="timeline-line__before-header">Before</div>
+    </div>
+
+    <div class="timeline-line__row is-left small-12 columns">
+      <h4 class="timeline-line__row-title">March 6, 2017</h4>
+    </div>
+
+
+
+    <div class="timeline-line__row-header is-right small-12 columns">
+      <div class="timeline-line__during-header">During</div>
+    </div>
+
+
+
+
+
+    <div class="timeline-line__row-header is-left small-12 columns">
+      <div class="timeline-line__after-header">After</div>
+    </div>
+
+
+  </section>
+
+</main>
+
+<script>
+
+$(document).ready(function() {
+  $(".js-before").click(function(){
+      // var targetPos = $("#pro-annual-button").offset().top - 440;
+      $('html, body').animate({scrollTop: 635 }, 1000);
+  });
+
+  $(".js-during").click(function(){
+      // var targetPos = $("#pro-annual-button").offset().top - 440;
+      $('html, body').animate({scrollTop: 1400 }, 1000);
+  });
+
+  $(".js-after").click(function(){
+      // var targetPos = $("#pro-annual-button").offset().top - 440;
+      $('html, body').animate({scrollTop: 2300 }, 1000);
+  });
+
+
+});
+
+</script>
+
+{% endblock %}
