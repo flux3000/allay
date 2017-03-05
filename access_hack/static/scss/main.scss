@@ -114,7 +114,8 @@ footer {
   justify-content: center;
 
   .home-summary__text {
-    font-weight: 300;
+    padding-top: 8px;
+    font-weight: 400;
     line-height: 1.5em;
     color: $drab;
   }
@@ -536,6 +537,7 @@ footer {
             color: $white;
             font-weight: $font-weight-ltbold;
             height: auto;
+            border: 1px solid $dependable;
           }
         }
 
