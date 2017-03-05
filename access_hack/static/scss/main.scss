@@ -144,6 +144,10 @@ footer {
         button {
             background-color: $dependable;
             color: $white;
+
+            &.selected {
+              background: $dependable-dark;
+            }
         }
 
         .options_button_description {
@@ -199,6 +203,7 @@ footer {
 
   .options_locations {
 
+    display: none;
     max-width: 80%;
     margin: 24px auto 0px;
     border-top: $light-border;
@@ -230,6 +235,7 @@ footer {
 
       .clinic_row {
 
+        display: none;
         
         font-size: .8em;
         border-bottom: $light-border;
@@ -240,6 +246,13 @@ footer {
           border-bottom: none;
         }
         
+        &.selected {
+          background-color: $lightest-gray;
+        }        
+        &.deselected {
+          /*opacity: .8;*/
+          color: $dark-gray;
+        }
         
         @media only screen and (max-width: 480px) {
           max-width: 90%;
@@ -263,11 +276,13 @@ footer {
         .clinic {
           text-align: left;
           line-height: 36px;
+          
           .clinic_name {
             display: block;
             text-align: left;
             font-size: 1.2em;
             font-weight: $font-weight-ltbold;
+            padding-left: 12px;
           }          
           .clinic_address {
             display: block;
@@ -275,6 +290,7 @@ footer {
             font-size: .9em;
             line-height: 1.2em;
             color: $dark-gray;
+            padding-left: 12px;
           }
           @media only screen and (max-width: 480px) {
             padding-bottom: 12px;
@@ -305,6 +321,7 @@ footer {
         .clinic_select {
           text-align: center;
           line-height: 36px;
+          padding-top: 6px;
           
           button {
             background-color: $dependable;
@@ -312,7 +329,10 @@ footer {
             font-weight: $font-weight-ltbold;
             height: auto;
             line-height: 30px;    
-            font-size: 12px;            
+            font-size: 12px;   
+            &.selected {
+              background: $dependable-dark;
+            }                     
           }
 
           @media only screen and (max-width: 480px) { 
@@ -345,6 +365,8 @@ footer {
   }
 
   .options_questions {
+
+    display: none;
 
     max-width: 80%;
     margin: 24px auto 0px;
