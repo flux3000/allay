@@ -265,7 +265,28 @@ footer {
 
     .locations_wrapper {
 
+        .clinic_row_header {
+          font-weight: $font-weight-bold;
+          border-bottom: $border;
+          padding-bottom: 4px;
+          margin-bottom: 12px;
+          text-align: left;
+          font-size: .8em;
 
+
+          @media only screen and (max-width: 640px) {
+            display: none !important;
+          }
+
+          .clinic_name {
+            padding-left: 12px;
+          }
+
+          .clinic_distance, .clinic_cost {
+            text-align: center;
+          }
+
+        }
 
       .clinic_row {
 
@@ -273,8 +294,12 @@ footer {
         
         font-size: .8em;
         border-bottom: $light-border;
-        margin-bottom: 12px;
-        padding-bottom: 12px;
+        margin: 0px auto;
+        padding: 12px 0px;
+
+        &.noborder {
+          border-bottom: none;
+        }
 
         &:last-of-type {
           border-bottom: none;
@@ -288,28 +313,18 @@ footer {
           color: $dark-gray;
         }
         
-        @media only screen and (max-width: 480px) {
+        @media only screen and (max-width: 640px) {
           max-width: 90%;
           margin: 0px auto 12px;
           font-size: .9em;
           line-height: 1.5em;
         }
 
-        &.header {
-          font-weight: $font-weight-bold;
-          border-bottom: $border;
-          padding-bottom: 0px;
-          margin-bottom: 12px;
 
-          @media only screen and (max-width: 480px) {
-            display: none !important;
-          }
-
-        }
 
         .clinic {
           text-align: left;
-          line-height: 36px;
+          line-height: 1.5em;
           
           .clinic_name {
             display: block;
@@ -317,16 +332,17 @@ footer {
             font-size: 1.2em;
             font-weight: $font-weight-ltbold;
             padding-left: 12px;
+            padding-bottom: 8px;
           }          
-          .clinic_address {
+          .clinic_address, .clinic_phone {
             display: block;
             text-align: left;
             font-size: .9em;
-            line-height: 1.2em;
+            line-height: 1.3em;
             color: $dark-gray;
             padding-left: 12px;
           }
-          @media only screen and (max-width: 480px) {
+          @media only screen and (max-width: 640px) {
             padding-bottom: 12px;
           }
         }
@@ -335,15 +351,18 @@ footer {
         .clinic_distance, .clinic_cost {
           text-align: center;
           line-height: 36px;
+
           .label {
             display: none;
           }
 
-          @media only screen and (max-width: 480px) { 
+          @media only screen and (max-width: 640px) { 
             text-align: left;
             line-height: 1.5em;
+
             .label {
               display: inline-block;
+              padding-left: 12px;
               padding-right: 6px;
               font-weight: $font-weight-bold;
             }
@@ -369,7 +388,7 @@ footer {
             }                     
           }
 
-          @media only screen and (max-width: 480px) { 
+          @media only screen and (max-width: 640px) { 
             margin-top: 24px;
 
             button {
