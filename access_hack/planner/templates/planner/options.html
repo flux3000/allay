@@ -13,9 +13,9 @@
 		<div class="options_description">
 			<div class="responses">You responded that you are <span class="response_age">(unknown)</span> years of age, you are in <span class="response_location">(unknown)</span>, and you are <span class="response_weeks">(unknown)</span> weeks pregnant.<br><a href="/intake">(Back to intake form)</a></div>
 
-			<div class="over_10">You are over 10 weeks pregnant, and are eligible for an in-clinic abortion. Please note that abortion pills (medical abortions) are only available for pregnancies up until exactly 10 weeks in duration.</div>
+			<div class="over_10">You are over 10 weeks pregnant, and are eligible for a surgical abortion. Please note that medical abortion (i.e., pill induced miscarriage) are only available for pregnancies up until exactly 10 weeks.</div>
 
-			<div class="under_10">Medical abortions (the abortion pill) are permitted only up until the 10th week of pregnancy. This means you only have <span class="weeks_remaining_pill">(unknown)</span> remaining for this option. After this, you will only be eligible for an in-clinic abortion.</div>
+			<div class="under_10">Medical abortions (i.e., pill) are permitted only up until 10 week of pregnancy. This means you only have <span class="weeks_remaining_pill">(unknown)</span> remaining for this option. After this time passes, you will only be eligible for a surgical abortion.</div>
 
 			<div class="exactly_10">Medical abortions (the abortion pill) are permitted only up until the 10th week of pregnancy. You are currently in your 10th week, so you will only be eligible for an in-clinic abortion.</div>
 
@@ -25,12 +25,13 @@
 		</div>
 	</div>
 
-	<div class="options_procedures">
+	<div class="options_procedures" id="optionsProcedures">
 		<header>
 			<h4>Please choose one of these two options for your procedure.</h4>
 		</header>
 		<div class="options_button_wrapper row">
 			<div class="options_button_container small-12 medium-6 columns">
+				<div class="button_check"><i class="fa fa-check"></i></div>
 				<button class="large option_button" data-option="pill">Pill (Medical Abortion)</button>
 				<div class="options_button_description">
 					Medical abortion requires two pills to stop the pregnancy.
@@ -40,12 +41,13 @@
 					<ul>
 					<li>The pill is safe. Only 1% of women who take it experience complications.</li>
 					<li>It is 95% effective. If it fails you can take it again.</li>
-					<li>This abortion resolves within 1 to 2 days after the second pill.</li>
+					<li>The abortion will be complete within 1 to 2 days after taking the second pill.</li>
 					<li>States laws on medical abortions vary. See state policies for more information.</li>
 					</ul>
 				</div>
 			</div>
 			<div class="options_button_container small-12 medium-6 columns">
+				<div class="button_check"><i class="fa fa-check"></i></div>
 				<button class="large option_button" data-option="clinic">Procedure (Surgical Abortion)</button>
 				<div class="options_button_description">
 					Surgical abortion involves a minor surgery.
@@ -55,7 +57,8 @@
 					<ul>
 					<li>Surgical abortions (up to 14 weeks) carry fewer complications than giving birth.</li>
 					<li>A surgical abortion procedure itself takes 15 to 20 minutes.</li>
-					<li>Local anesthetic (makes you sleepy) is administered, but there a short recovery time.</li>
+					<li>You will be sedated to make you sleepy and relaxed. Local anesthetic will be administered to make you comfortable.
+					<li>You will have a short recovery time after the procedure.</li>
 					<li>States laws on surgical abortions vary. See state policies for more information.</li>
 					</ul>
 				</div>
@@ -65,11 +68,11 @@
 	</div>
 
 
-	<div class="options_locations">
+	<div class="options_locations" id="optionsLocations">
 		<header>
-			<h4>Here are some abortion service providers located near you.</h4>
+			<h4>Here are some abortion service providers near you.</h4>
 			<div class="locations_subheader">
-				These providers offer the service that you’ve chosen and/or that is available to you. Please contact them to set up an appointment in advance, otherwise you may need to explore other service options from the list.
+				These providers offer services that you have chosen and/or are available to you. Please contact them to set up an appointment <strong>in advance</strong>, otherwise you may need to explore other service options.
 			</div>
 		</header>
 		<div class="locations_wrapper">
@@ -150,7 +153,7 @@
 					<div class="label">Distance:</div>8.9 miles
 				</div>
 				<div class="clinic_cost small-12 medium-2 columns">
-					<div class="label">Estimated Cost:</div>$535
+					<div class="label">Estimated Cost:</div>$800
 				</div>
 				<div class="clinic_select small-12 medium-2 columns">
 					<button class="clinic_select_btn">Select</button>
@@ -162,7 +165,7 @@
 						Women's Center of Houston
 					</div>
 					<div class="clinic_address">
-						(832) 705-6370
+						8200 Wednesbury Ln, Houston, TX 77074
 					</div>
 
 					<div class="clinic_phone">
@@ -173,7 +176,7 @@
 					<div class="label">Distance:</div>12.5 miles
 				</div>
 				<div class="clinic_cost small-12 medium-2 columns">
-					<div class="label">Estimated Cost:</div>$705
+					<div class="label">Estimated Cost:</div>$750
 				</div>
 				<div class="clinic_select small-12 medium-2 columns">
 					<button class="clinic_select_btn">Select</button>
@@ -197,7 +200,7 @@
 					<div class="label">Distance:</div>18.9 miles
 				</div>
 				<div class="clinic_cost small-12 medium-2 columns">
-					<div class="label">Estimated Cost:</div>$635
+					<div class="label">Estimated Cost:</div>$700
 				</div>
 				<div class="clinic_select small-12 medium-2 columns">
 					<button class="clinic_select_btn">Select</button>
@@ -231,7 +234,7 @@
 
 
 
-	<div class="options_questions">
+	<div class="options_questions" id="optionsQuestions">
 		<header>
 			<h4>Please answer a few additional questions.</h4>
 			<div class="questions_subheader">
@@ -277,7 +280,7 @@
 
 				<div class="options_form_row row">
 					<div class="options_form_question small-12 medium-8 columns">
-						How will you coming up with the funds for the procedure (including the cost of the procedure, travel, lodging, and child/pet care, if applicable)?
+						How will you secure funds for the procedure (including the cost of the procedure, travel, lodging, and child/pet care)?
 					</div>
 					<div class="options_form_value small-12 medium-4 columns">
 
@@ -339,13 +342,12 @@ $(document).ready(function() {
 	} else {
 		state = "texas";
 		$(".response_location").text("Palacios, TX (77465)");
-
 	}
 
-	if (adult == "yes") {
-		$(".response_age").text("18 years or older");
-	} else if (adult == "no") {
+	if (adult == "no") {
 		$(".response_age").text("Under 18");
+	} else {
+		$(".response_age").text("18 years or older");
 	}
 
 	if (weeks > 0) {
@@ -396,10 +398,15 @@ $(document).ready(function() {
 
 		$(".option_button").removeClass("selected");
 		$(this).addClass("selected");
+		$(this).siblings('.button_check').animate({'opacity': 1});
 
 		option = $(this).data("option");
 
-		$(".options_locations").show();
+		$(".options_locations").show(function() {
+			$('html, body').animate({
+		        scrollTop: $("#optionsLocations").offset().top
+		    }, 1000);
+		});
 
 		if (state == "texas"){
 			$(".clinic_row.texas").fadeIn('slow');
@@ -412,7 +419,11 @@ $(document).ready(function() {
 
 	$(".clinic_select_btn").click(function(e) {
 		e.preventDefault();
-		$(".options_questions").fadeIn('slow');
+		$(".options_questions").show(function() {
+			$('html, body').animate({
+		        scrollTop: $("#optionsQuestions").offset().top
+		    }, 1000);
+		});
 		$(".clinic_select_btn, .clinic_row").removeClass("selected")
 		$(".clinic_select_btn").text("Select");
 
