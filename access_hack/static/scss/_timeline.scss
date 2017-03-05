@@ -101,7 +101,6 @@
 .timeline-line {
   position: relative;
   border-top: 2px solid $drab;
-  height: 2000px; // Remove once content added
 }
 
 .timeline-line__background {
@@ -164,6 +163,7 @@
 
 .timeline-line__row {
   color: $deep-sea;
+  min-height: 144px;
 }
 
 .timeline-line__row-block {
