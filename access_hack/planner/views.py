@@ -14,7 +14,6 @@ def index(request):
 
     return redirect('/welcome/')
 
-
 def welcome(request):
 
 	context = {}
