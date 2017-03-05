@@ -25,7 +25,12 @@
 <script>
 
 $(document).ready(function() {
-  $('.js-get-started').click("")
+  $('.js-get-started').click(function(e){
+    e.preventDefault();
+
+    document.location = "/intake";
+
+  });
 
 });
 

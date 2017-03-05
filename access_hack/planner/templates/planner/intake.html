@@ -28,8 +28,8 @@
 						<select id="question_age">
 							<option value="">Select</option>
 							<option value="">-------</option>
-							<option value="">Yes</option>
-							<option value="">No</option>
+							<option value="yes">Yes</option>
+							<option value="no">No</option>
 						</select>
 					</div>
 				</div>				
@@ -40,7 +40,13 @@
 					</div>
 					<div class="intake_form_value small-12 medium-4 columns">
 
-						<input id="question_zip" name="question_zip" type="text" size="5">
+						<!-- <input id="question_zip" name="question_zip" type="text" size="5"> -->
+
+						<select id="question_zip" name="question_zip">
+							<option value="">(demo)</option>
+							<option value="90057">90057</option>
+							<option value="77465">77465</option>
+						</select>						
 					</div>
 				</div>
 
@@ -68,6 +74,34 @@
 <script>
 
 $(document).ready(function() {
+
+	$("#intakeSubmit").click(function(e) {
+		e.preventDefault();
+		var location = "/options/";
+		var zip, adult, weeks;
+
+		if ($("#question_zip").val() == "") {
+			zip = 90057;
+		} else {
+			zip = $("#question_zip").val();
+		}
+		if ($("#question_age").val() == "") {
+			adult = "yes";
+		} else {
+			adult = $("#question_age").val();
+		}
+		if ($("#question_weeks").val() == "") {
+			weeks = 12;
+		} else {
+			weeks = $("#question_weeks").val();
+		}
+
+
+		location += "?zip=" + zip;
+		location += "&adult=" + adult;
+		location += "&weeks=" + weeks;
+		document.location = location;
+	});
 
 
 });

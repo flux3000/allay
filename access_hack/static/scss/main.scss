@@ -112,14 +112,49 @@ footer {
         max-width: 90%;
       }
 
+      .responses {
+        font-size: 1.2em;
+        margin-bottom: 36px;
+        .response_age, .response_weeks, .response_location {
+          font-weight: $font-weight-ltbold;
+        }
+        a {
+          font-size: .8em;
+          display: inline-block;
+          margin-top: 6px;
+        }
+      }
+
+      .under_10, .over_10, .exactly_10 {
+        display: none;
+        margin-bottom: 24px;
+      }
+
+      .state_law_header {
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: .9em; 
+        border-bottom: $light-border;
+        padding-bottom: 12px;
+        margin-bottom: 12px;    
+        margin-top: 24px;  
+      }
+
+      .weeks_remaining_pill, .weeks_remaining_abortion {
+        font-weight: $font-weight-ltbold;
+      }
+
+
     }
 
   }
 
   .options_procedures {
 
+    display: none;
     max-width: 80%;
-    margin: 24px auto 0px;
+    margin: 0px auto;
     border-top: $light-border;
     text-align: center;
     padding: 48px 0px;
@@ -144,6 +179,7 @@ footer {
         button {
             background-color: $dependable;
             color: $white;
+            font-weight: $font-weight-ltbold;
 
             &.selected {
               background: $dependable-dark;
@@ -224,8 +260,6 @@ footer {
       .locations_subheader {
 
       }
-
-
     }
 
 
@@ -345,23 +379,9 @@ footer {
               font-size: 14px;             
             }
           }
-
         }
-
-
-
       }
-
-
-
-
-
     }
-
-
-
-
-
   }
 
   .options_questions {
