@@ -8,10 +8,20 @@
 
 	<div class="options_header">
 		<header>
-			<h3>Your Procedure Options</h3>
+			<h2>Your Procedure Options</h2>
 		</header>
 		<div class="options_description">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			<div class="responses">You responded that you are <span class="response_age">(unknown)</span> years of age, you are in <span class="response_location">(unknown)</span>, and you are <span class="response_weeks">(unknown)</span> weeks pregnant.<br><a href="/intake">(Back to intake form)</a></div>
+
+			<div class="over_10">You are over 10 weeks pregnant, and are eligible for an in-clinic abortion. Please note that abortion pills (medical abortions) are only available for pregnancies up until exactly 10 weeks in duration.</div>			
+			
+			<div class="under_10">Medical abortions (the abortion pill) are permitted only up until the 10th week of pregnancy. This means you only have <span class="weeks_remaining_pill">(unknown)</span> remaining for this option. After this, you will only be eligible for an in-clinic abortion.</div>
+			
+			<div class="exactly_10">Medical abortions (the abortion pill) are permitted only up until the 10th week of pregnancy. You are currently in your 10th week, so you will only be eligible for an in-clinic abortion.</div>
+			
+<!-- 			<div class="state_law_header">Texas State Law Restrictions to Know</div>
+			<div class="location_texas">In Texas, state law permits in-clinic abortions through 22 weeks of pregnancy. You have <span class="weeks_remaining_abortion">(unknown)</span> remaining until you will no longer be able to have an abortion in Texas. After that point, you will need to explore out-of-state options.</div>
+ -->
 		</div>
 	</div>
 
@@ -23,7 +33,7 @@
 			<div class="options_button_container small-12 medium-6 columns">
 				<button class="large option_button" data-option="pill">Take a Pill</button>
 				<div class="options_button_description">
-					With this option, you take a pill rather than have a procedure in a doctor's office.
+					With this option, known as a medical abortion, you take a pill rather than have a procedure in a doctor's office.
 				</div>			
 				<div class="options_button_faq">
 					<div class="faq_header">Things to know:</div>
@@ -80,10 +90,10 @@
 			<div class="clinic_row row california">
 				<div class="clinic small-12 medium-6 columns">
 					<div class="clinic_name">
-						Planned Parenthood - Oakland Office
+						B Street Health Center
 					</div>
 					<div class="clinic_address">
-						200 Webster St #100, Oakland, CA 94607
+						201 29th Street, Ste. B, Sacramento, CA 95816
 					</div>
 				</div>				
 				<div class="clinic_distance small-12 medium-2 columns">
@@ -100,10 +110,10 @@
 			<div class="clinic_row row california">
 				<div class="clinic small-12 medium-6 columns">
 					<div class="clinic_name">
-						Family Planning Specialists
+						Sac Valley Pregnancy Clinic
 					</div>
 					<div class="clinic_address">
-						200 Webster St #100, Oakland, CA 94607
+						2316 Bell Executive Lane, Sacramento, CA 95825
 					</div>
 				</div>				
 				<div class="clinic_distance small-12 medium-2 columns">
@@ -119,10 +129,10 @@
 			<div class="clinic_row row california">
 				<div class="clinic small-12 medium-6 columns">
 					<div class="clinic_name">
-						Planned Parenthood - Walnut Creek Office
+						Choice Medical Group @ FPA Women's Health
 					</div>
 					<div class="clinic_address">
-						200 Webster St #100, Oakland, CA 94607
+						2322 Butano Dr #205 Sacramento, CA 95825
 					</div>
 				</div>				
 				<div class="clinic_distance small-12 medium-2 columns">
@@ -282,7 +292,7 @@
 				</div>
 
 				<div class="options_form_button_row">
-					<button class="large options_form_button" id="createTimeline">Create My Timeline</button>
+					<button class="large options_form_button" id="createTimeline">Create My Plan</button>
 				</div>
 			</div>
 		</div>
@@ -314,18 +324,68 @@ $(document).ready(function() {
 	}
 
 	var params = getSearchParameters();
+	var zip = params.zip;
+	var adult = params.adult;
+	var weeks = params.weeks;
 
-	var state = params.state;
-
-	if (!state){
+	if (zip == "90057") {
+		state = "california";
+		$(".response_location").text("Sacramento, CA (90057)");
+	
+	} else {
 		state = "texas";
+		$(".response_location").text("Palacios, TX (77465)");
+
 	}
 
-	console.log("State: " + state);
+	if (adult == "yes") {
+		$(".response_age").text("18 years or older");
+	} else if (adult == "no") {
+		$(".response_age").text("Under 18");
+	}
 
-	// Pill = Texas, Clinic = California
+	if (weeks > 0) {
+		$(".response_weeks").text(weeks);
 
-	var option = "pill";
+		if (weeks >= 10) {
+			// only the clinic option is available. 
+
+			if (weeks == 10) {
+				$(".exactly_10").show();
+			} else {
+				$(".over_10").show();
+			}
+			$(".options_locations").show();
+
+			if (state == "texas"){
+				$(".clinic_row.texas").fadeIn('slow');
+			} else if (state == "california"){
+				$(".clinic_row.california").fadeIn('slow');
+			}
+
+		} else if (weeks < 10) {
+			$(".under_10, .options_procedures").fadeIn();
+			var weeks_remaining_pill = 10 - weeks;
+			if (weeks_remaining_pill == 1) {
+				weeks_remaining_pill += " week";
+			} else {
+				weeks_remaining_pill += " weeks";
+			}
+			$(".weeks_remaining_pill").text(weeks_remaining_pill);
+		}
+
+		// var weeks_remaining_abortion = 22 - weeks;
+		// if (weeks_remaining_abortion == 1) {
+		// 	weeks_remaining_abortion += " week";
+		// } else {
+		// 	weeks_remaining_abortion += " weeks";
+		// }		
+		// $(".weeks_remaining_abortion").text(weeks_remaining_abortion);		
+
+	}
+	
+
+
 
 	$(".option_button").click(function(e) {
 		e.preventDefault();
