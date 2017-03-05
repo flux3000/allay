@@ -354,13 +354,8 @@ footer {
           /*opacity: .8;*/
           color: $dark-gray;
         }
-<<<<<<< HEAD
 
-        @media only screen and (max-width: 480px) {
-=======
-        
         @media only screen and (max-width: 640px) {
->>>>>>> master
           max-width: 90%;
           margin: 0px auto 12px;
           font-size: .9em;
@@ -371,27 +366,17 @@ footer {
 
         .clinic {
           text-align: left;
-<<<<<<< HEAD
-          line-height: 36px;
-
-=======
           line-height: 1.5em;
-          
->>>>>>> master
+
           .clinic_name {
             display: block;
             text-align: left;
             font-size: 1.2em;
             font-weight: $font-weight-ltbold;
             padding-left: 12px;
-<<<<<<< HEAD
-          }
-          .clinic_address {
-=======
             padding-bottom: 8px;
-          }          
+          }
           .clinic_address, .clinic_phone {
->>>>>>> master
             display: block;
             text-align: left;
             font-size: .9em;
@@ -413,11 +398,7 @@ footer {
             display: none;
           }
 
-<<<<<<< HEAD
-          @media only screen and (max-width: 480px) {
-=======
-          @media only screen and (max-width: 640px) { 
->>>>>>> master
+          @media only screen and (max-width: 640px) {
             text-align: left;
             line-height: 1.5em;
 
@@ -450,11 +431,7 @@ footer {
             }
           }
 
-<<<<<<< HEAD
-          @media only screen and (max-width: 480px) {
-=======
-          @media only screen and (max-width: 640px) { 
->>>>>>> master
+          @media only screen and (max-width: 640px) {
             margin-top: 24px;
 
             button {
