@@ -28,7 +28,9 @@
 
 .container {
   width: 100vw;
-  margin-top: 40px;
+  max-width: $max-width;
+  margin: 40px auto 0px;
+
 }
 
 footer {
@@ -89,6 +91,8 @@ footer {
 
   .options_header {
 
+    padding: 36px 0px;
+
     text-align: center;
 
     header {
@@ -100,63 +104,335 @@ footer {
     }
 
     .options_description {
+      max-width: 50%;
+      margin: 0px auto;
       font-size: .9em;
+
+      @media only screen and (max-width: 480px) {
+        max-width: 90%;
+      }
+
     }
 
   }
 
   .options_procedures {
 
-    margin-top: 24px;
-    padding-top: 24px;
-    border-top: $border;
+    max-width: 80%;
+    margin: 24px auto 0px;
+    border-top: $light-border;
     text-align: center;
+    padding: 48px 0px;
 
-    .options_button_container {
+    @media only screen and (max-width: 480px) {
+      max-width: 90%;
+    }
 
-      max-width: 80%;
-      margin: 0px auto;
+    header {
+      margin-bottom: 48px;
+      h4 {
 
-      button {
+      }
+    }
+
+
+    .options_button_wrapper {
+
+
+      .options_button_container {
+
+        button {
+            background-color: $dependable;
+            color: $white;
+        }
+
+        .options_button_description {
+          margin-top: 18px;
+          font-size: .9em;
+          padding: 12px 32px;
+          /*text-align: left;*/
+
+        }
+
+        .options_button_faq {
+          font-size: .8em;
+          padding: 12px 32px;
+          /*text-align: left;*/
+
+          .faq_header {
+            display: inline-block;
+            font-weight: $font-weight-bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: .9em;
+            border-bottom: $light-border;
+            padding-bottom: 12px;
+            margin-bottom: 6px;
+          }
+          
+          ul {
+            list-style-type: none;
+            padding-left: 0px;
+
+            li {
+              padding-bottom: 8px;
+            }
+          }
+
+          @media only screen and (max-width: 480px) { 
+            font-size: .9em;
+          }
+
+        }
+
+        @media only screen and (max-width: 480px) {
+
+          &:first-of-type {
+            margin-bottom: 32px;
+          }
+          
+        }
+
+      }
+    }
+  }
+
+  .options_locations {
+
+    max-width: 80%;
+    margin: 24px auto 0px;
+    border-top: $light-border;
+    text-align: center;
+    padding: 48px 0px;
+
+    @media only screen and (max-width: 480px) {
+      max-width: 90%;
+    }
+
+    header {
+      margin-bottom: 48px;
+
+      h4 {
 
       }
 
-      .options_button_description {
+      .locations_subheader {
+
+      }
+
+
+    }
+
+
+    .locations_wrapper {
+
+
+
+      .clinic_row {
+
+        
         font-size: .8em;
-        padding: 8px 0px;
+        border-bottom: $light-border;
+        margin-bottom: 12px;
+        padding-bottom: 12px;
 
-      }
+        &:last-of-type {
+          border-bottom: none;
+        }
+        
+        
+        @media only screen and (max-width: 480px) {
+          max-width: 90%;
+          margin: 0px auto 12px;
+          font-size: .9em;
+          line-height: 1.5em;
+        }
 
-      .options_button_faq {
+        &.header {
+          font-weight: $font-weight-bold;
+          border-bottom: $border;
+          padding-bottom: 0px;
+          margin-bottom: 12px;
 
-        ul {
-          li {
+          @media only screen and (max-width: 480px) {
+            display: none !important;
+          }
 
+        }
+
+        .clinic {
+          text-align: left;
+          line-height: 36px;
+          .clinic_name {
+            display: block;
+            text-align: left;
+            font-size: 1.2em;
+            font-weight: $font-weight-ltbold;
+          }          
+          .clinic_address {
+            display: block;
+            text-align: left;
+            font-size: .9em;
+            line-height: 1.2em;
+            color: $dark-gray;
+          }
+          @media only screen and (max-width: 480px) {
+            padding-bottom: 12px;
           }
         }
+
+
+        .clinic_distance, .clinic_cost {
+          text-align: center;
+          line-height: 36px;
+          .label {
+            display: none;
+          }
+
+          @media only screen and (max-width: 480px) { 
+            text-align: left;
+            line-height: 1.5em;
+            .label {
+              display: inline-block;
+              padding-right: 6px;
+              font-weight: $font-weight-bold;
+            }
+          }
+
+        }
+
+
+        .clinic_select {
+          text-align: center;
+          line-height: 36px;
+          
+          button {
+            background-color: $dependable;
+            color: $white;
+            font-weight: $font-weight-ltbold;
+            height: auto;
+            line-height: 30px;    
+            font-size: 12px;            
+          }
+
+          @media only screen and (max-width: 480px) { 
+            margin-top: 24px;
+
+            button {
+              min-width: 100px;
+              padding: 0px 14px;
+              height: auto;
+              font-size: 14px;             
+            }
+          }
+
+        }
+
+
+
+      }
+
+
+
+
+
+    }
+
+
+
+
+
+  }
+
+  .options_questions {
+
+    max-width: 80%;
+    margin: 24px auto 0px;
+    border-top: $light-border;
+    text-align: center;
+    padding: 48px 0px;
+
+    @media only screen and (max-width: 480px) {
+      max-width: 90%;
+    }
+
+    header {
+      margin-bottom: 48px;
+
+      h4 {
+
+      }
+
+      .questions_subheader {
 
       }
 
     }
 
 
+    .options_form_wrapper {
 
+      margin: 0px auto;
+      max-width: 80%;
+      @media only screen and (max-width: 480px) {
+        max-width: 90%;
+      }
+      .options_form {
+
+        font-size: 1em;
+        text-align: left;
+
+        .options_form_row {
+
+          margin-bottom: 12px;
+          padding-bottom: 12px;
+
+          .options_form_question { 
+
+            
+          }
+
+          .options_form_value {
+
+            select {
+              min-width: 150px;
+              max-width: 250px;
+              font-size: .8em;
+            }
+
+            @media only screen and (max-width: 480px) { 
+              margin: 24px auto;
+
+              select {
+                max-width: none;
+                width: 100%;
+                font-size: 1em;
+
+              }
+            }
+
+          }
+
+
+        }
+        .options_form_button_row {
+          margin: 36px 0px;
+          text-align: center;
+
+          .options_form_button {
+            background-color: $dependable;
+            color: $white;
+            font-weight: $font-weight-ltbold;
+            height: auto;
+          }
+        }
+
+      }
+
+
+
+    }
   }
-
-  .options_locations {
-
-
-  }
-
-
-
-
-
-
-
-
-
-
 
 
 }
