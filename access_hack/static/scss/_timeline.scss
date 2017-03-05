@@ -119,13 +119,13 @@
 .timeline-line__background-left {
   flex: 1 1 50%;
   box-sizing: border-box;
-  border-right: 70px solid $youll;
+  border-right: 40px solid $youll;
 }
 
 .timeline-line__background-right {
   flex: 1 1 50%;
   box-sizing: border-box;
-  border-left: 70px solid $youll;
+  border-left: 40px solid $youll;
 }
 
 //////////////////////////////////////// Timeline Rows and Structure
@@ -140,20 +140,30 @@
   &.is-left {
     justify-content: flex-start;
     text-align: left;
-  
+
     .info_box {
       float: left;
     }
 
-
+    .timeline-line__date {
+      padding-right: 8px;
+    }
   }
 
   &.is-right {
     justify-content: flex-end;
     text-align: right;
-  
+
     .info_box {
       float: right;
+    }
+
+    .timeline-line__row-subtitle {
+      margin-left: 50%;
+    }
+
+    .timeline-line__date {
+      padding-left: 8px;
     }
 
   }
@@ -169,7 +179,8 @@
   color: #fff;
 }
 
-.timeline-line__during-header {
+.timeline-line__during-header,
+.timeline-line__after-header {
   padding: 10px 30px 10px 20px;
   margin: 20px 0 20px 20px;
 }
@@ -183,11 +194,7 @@
 .timeline-line__row-block {
   padding: 10px 20px 10px 30px;
   margin: 20px 20px 20px 0;
-  max-width: 50%;
-
-  @media only screen and (max-width: 480px) {
-    max-width: 80%;
-  }
+  width: 100%;
 }
 
 .timeline-line__row-title,
@@ -201,12 +208,28 @@
 }
 
 .timeline-line__row-subtitle {
-  color: $dependable;
-  margin: -.2em 0 .2em;
-  font-weight: 700;
+  max-width: 50%;
+  padding: 5px 0 13px;
+  display: flex;
+
+  .timeline-line__date {
+    flex: 0 0 auto;
+    color: $dependable;
+    margin: -.2em 0 .2em;
+    font-weight: 700;
+  }
+
+  .timeline-line__line {
+    flex: 1 1 auto;
+    margin-top: 4px;
+    background-color: $youll;
+    height: 5px;
+  }
 }
 
 .timeline-line__row-body {
+  display: inline-block;
+  max-width: 42%;
   margin-top: 0;
   font-weight: 400;
 }
@@ -230,15 +253,7 @@
 
   .info_box {
     display: none;
-    
-    width: 80%;
-    max-width: 80%;
-
-    @media only screen and (max-width: 480px) {
-      width: 100%;
-      max-width: 100%;
-    }
-
+    width: 90%;
     border-radius: 3px;
     border: $border;
     background-color: $whitish;
@@ -255,14 +270,14 @@
         padding-left: 12px;
         margin-top: 0px;
         margin-bottom: 0px;
-        
+
         li {
           padding-bottom: 6px;
           /*height: 18px;*/
         }
         &.plain {
           list-style-type: none;
-        }        
+        }
         &.checkbox {
           list-style-type: none;
 
@@ -281,13 +296,3 @@
 
 
 }
-
-
-
-
-
-
-
-
-
-

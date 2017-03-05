@@ -551,6 +551,8 @@ footer {
 
 
 #intake {
+  height: calc(100vh - 120px);
+  margin: 0 20px;
 
   .intake_header {
 
@@ -646,6 +648,7 @@ footer {
 
           .intake_form_button {
             background-color: $dependable;
+            border: 1px solid $dependable;
             color: $white;
             font-weight: $font-weight-ltbold;
             height: auto;
