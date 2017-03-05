@@ -8,17 +8,19 @@
 
   <section class="home-header">
     <h1 class="home-header__title">Allay</h1>
-    <h3 class="home-header__subtitle">Your Step-by-Step Guide to the Abortion Process</h3>
-    <button class="home-header__get-started js-get-started">Get Started</button>
+    <h3 class="home-header__subtitle">Your way to choice</h3>
+    <button class="home-header__get-started large js-get-started">Get Started</button>
   </section>
 
   <section class="home-summary">
     <div class="row">
       <div class="small-12 medium-6 columns">
-        <h5 class="home-summary__text">Allay is your visualized map of your abortion path, offering trustworthy information for every step along the way. </h4>
+        <h5 class="home-summary__text">Allay is your visualized timeline of your abortion path, offering a comprehensive guide to your road ahead. </h4>
       </div>
     </div>
   </section>
+
+  <section class="home-image"></section>
 
 </main>
 
@@ -30,6 +32,15 @@ $(document).ready(function() {
 
     document.location = "/intake";
 
+  });
+
+  $(window).scroll(function(e){
+    var scroll_Top = $(this).scrollTop();
+    if (scroll_Top > 100) {
+      $('.main-nav__logo').addClass("is-visible");
+    } else {
+      $('.main-nav__logo').removeClass("is-visible");
+    }
   });
 
 });
